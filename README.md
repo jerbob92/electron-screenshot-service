@@ -44,7 +44,7 @@ In addition to [all options](http://electron.atom.io/docs/v0.36.5/api/browser-wi
 
 ##### delay
 
-Type: `number` *(seconds)*  
+Type: `number` *(milliseconds)*  
 Default: `0`
 
 Delay capturing the screenshot.
@@ -87,6 +87,20 @@ Default: `undefined`
 
 This css will be injected into the page before the screenshot is taken.
 
+##### js
+
+Type: `String`  
+Default: `undefined`
+
+It must contain a function definition that takes on parameter e.g.
+```js
+js: 'function(takeScreenshot){ /*Do some stuff*/ takeScreenshot();}'
+```
+or
+```js
+js: 'takeScreenshot => { /*Do some stuff*/ takeScreenshot();}'
+```
+
 ##### transparent
 
 Type: `Boolean`  
@@ -113,6 +127,43 @@ jobs across `scale` instances.
 
 # Changelog
 
+##### `4.0.1`
+
+* Update to `electron@1.4.1`
+
+##### `4.0.0`
+
+* Update to `electron@1.4.0`
+
+##### `3.3.1`
+
+* Update to `electron@1.3.4`
+
+##### `3.3.0`
+
+* Update to `electron@1.3.1`
+
+##### `3.2.3`
+
+* Fix PORT bug on windows (Thanks to [peerbolte](https://github.com/FWeinb/electron-screenshot-service/pull/26))
+
+##### `3.2.2`
+
+* Update to `electron@1.2.7`
+
+##### `3.2.1`
+
+* Fix post install script on windows
+
+##### `3.2.0`
+
+* Update to `electron-screenshot-app@3.1.0`
+* Support `options.js`
+
+##### `3.1.3`
+
+* Update to `electron@1.2.6`
+* Fix bug in keeping `browserCount` correct. (Thanks to [jerbob92](https://github.com/FWeinb/electron-screenshot-service/pull/22))
 
 ##### `3.1.2`
 

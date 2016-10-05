@@ -8,7 +8,7 @@ const terminate = () => {
 	app.exit(0);
 };
 
-sock.connect(parseInt(process.env.ELECTRON_SCREENSHOT_PORT, 10));
+sock.connect(parseInt(process.env.ELECTRON_SCREENSHOT_PORT, 10),  process.env.HOST || 'localhost');
 
 app.on('window-all-closed', () => {});
 app.on('ready', () => {
